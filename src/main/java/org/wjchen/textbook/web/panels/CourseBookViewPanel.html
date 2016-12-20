@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns:wicket="http://wicket.apache.org">
+<body>
+<wicket:panel>
+		<div id="required" class="panel panel-default">
+			<div class="panel-heading">
+				<span class="panel-title">
+					Required Textbooks for purchase
+					<span class="pull-right">
+						<a data-toggle="collapse" href="#collapse-required">
+                        	<span class="toggle-icon glyphicon glyphicon-collapse-up"></span>
+                        </a>
+					</span>
+				</span>
+			</div>
+			<div id="collapse-required" class="panel-collapse collapse in">
+				<div class="panel-body" wicket:id="textbook-required-panel"></div>
+			</div>
+		</div>
+		
+		<div id="recommended" class="panel panel-default">
+			<div  class="panel-heading">
+				<span class="panel-title">
+					Recommended Textbooks for purchase
+					<span class="pull-right">
+						<a data-toggle="collapse" href="#collapse-recommended">
+                        	<span class="toggle-icon glyphicon glyphicon-collapse-up"></span>
+                        </a>
+					</span>
+				</span>
+			</div>				
+			<div id="collapse-recommended" class="panel-collapse collapse in">
+				<div class="panel-body" wicket:id="textbook-recommended-panel"></div>
+			</div>
+		</div>
+</wicket:panel>
+</body>
+</html>

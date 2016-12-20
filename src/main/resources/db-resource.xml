@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+				http://www.springframework.org/schema/beans 
+                http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+                http://www.springframework.org/schema/context
+                http://www.springframework.org/schema/context/spring-context-3.2.xsd
+                http://www.springframework.org/schema/aop
+                http://www.springframework.org/schema/aop/spring-aop-3.2.xsd
+                http://www.springframework.org/schema/tx
+                http://www.springframework.org/schema/tx/spring-tx-3.2.xsd
+">
+
+	<import resource="db-properties.xml"/>
+	
+	<bean id="org.wjchen.textbook.DbHibernateProperties"
+		class="org.springframework.beans.factory.config.PropertiesFactoryBean"
+		lazy-init="true" depends-on="org.wjchen.textbook.DbPropertyConfigurer">
+		<property name="properties">
+			<props>
+				<prop key="hibernate.dialect">${textbook.hibernate.dialect}</prop>
+				<prop key="hibernate.show_sql">${hibernate.show_sql}</prop>
+				<prop key="hibernate.query.substitutions">true 1, false 0, yes 'Y', no 'N'</prop>
+				<prop key="hibernate.hbm2ddl.auto">none</prop>
+				<prop key="hibernate.jdbc.use_streams_for_binary">true</prop>
+				<prop key="hibernate.cache.use_query_cache">true</prop>
+				<prop key="hibernate.cache.provider_class">${hibernate.cache.provider_class}</prop>			
+			</props>
+		</property>
+	</bean>
+		
+    <bean id="org.wjchen.textbook.DbDataSource"
+        class="org.apache.commons.dbcp.BasicDataSource">
+        <property name="driverClassName">
+            <value>${textbook.driverClassName}</value>
+        </property>
+        <property name="url">
+            <value>${textbook.DataSource}</value>
+        </property>
+        <property name="username">
+            <value>${textbook.username}</value>
+        </property>
+        <property name="password">
+            <value>${textbook.password}</value>
+        </property>
+    </bean>
+    
+    
+	<!-- Session Factory --> 
+	<bean id="org.wjchen.textbook.SessionFactory"
+		class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+        <property name="packagesToScan" value="org.wjchen.textbook.models"/>
+		<property name="hibernateProperties" ref="org.wjchen.textbook.DbHibernateProperties"/>
+		<property name="dataSource" ref="org.wjchen.textbook.DbDataSource"/>
+	</bean>
+		
+	<!-- Transaction Manager --> 
+	<bean id="org.wjchen.textbook.TransactionManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="org.wjchen.textbook.SessionFactory" />
+		<qualifier value="textbook" />
+	</bean>
+	
+	<tx:annotation-driven />
+	
+</beans>

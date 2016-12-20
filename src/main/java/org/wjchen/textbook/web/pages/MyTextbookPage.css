@@ -1,0 +1,20 @@
+@CHARSET "UTF-8";
+
+.panel-collapsed .panel-body {
+	display:none;
+  	border: 0;
+}
+		
+.panel.panel-collapsed {
+	padding-bottom:0; 
+	border-bottom:0;
+}	
+
+.table > thead > tr > th, .table > thead > tr > td {
+    border: 0;
+}
+
+.table-striped > tbody > tr:nth-child(odd) > td, 
+.table-striped > tbody > tr:nth-child(odd) > th {
+    background-color: #e0ecf8;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns:wicket="http://wicket.apache.org">
+<wicket:head>
+</wicket:head>
+<body>
+<wicket:panel>
+	<div class="panel">
+		<div class="panel-heading">
+			<span class="panel-title">New Textbook</span>
+		</div>
+		<div class="panel-body">
+			<div>
+				<span wicket:id="new-book-description"></span>
+			</div>
+		</div>
+	</div>
+	
+	<div class="panel">
+		<div class="panel-body">
+			<form role="form" wicket:id="new-book-form">
+				<div class="form-group">
+					<label>*Required</label>
+				</div>
+				<div class="form-group">
+					<div wicket:id="new-book-feedback"></div>
+				</div>
+				<div class="form-group">
+					<div>
+						<label></label> <label wicket:id="label-book-isbn"></label> <span wicket:id="label-book-isbn-sample"></span>
+					</div>
+					<div>
+						<input type="text" class="form-control" wicket:id="book-isbn-input" />
+					</div>
+				</div>
+				<div class="form-group">
+					<div>
+						<label>*</label> <label wicket:id="label-book-title"></label> <span wicket:id="label-book-title-sample"></span>
+						
+					</div>
+					<div>
+						<input type="text" class="form-control" wicket:id="book-title-input" />
+					</div>
+				</div>
+				<div class="form-group">
+					<div>
+						<label>*</label> <label wicket:id="label-book-authors"></label> <span  wicket:id="label-book-authors-sample"></span>
+					</div>
+					<div>						
+						<input type="text" class="form-control" wicket:id="book-authors-input" />
+					</div>
+				</div>
+				<div class="form-group">
+					<div>
+						<label>*</label> <label wicket:id="label-book-publisher"></label> <span wicket:id="label-book-publisher-sample"></span>
+					</div>
+					<div> 
+						<input type="text"  wicket:id="book-publisher-input" />
+					</div>
+				</div>
+				<div class="form-group">
+					<div>
+						<label>*</label> <label wicket:id="label-book-copyright"></label> <span wicket:id="label-book-copyright-sample"></span>
+					</div>
+					<div>
+						<input type="text" class="form-control" wicket:id="book-copyright-input" />
+					</div>
+				</div>
+				<button type="submit" class="btn-sm btn-default" wicket:id="add-as-required">
+					<span wicket:id="label-btn-required"></span>
+				</button>
+				<button type="submit" class="btn-sm btn-default" wicket:id="add-as-recommendated">
+					<span wicket:id="label-btn-recommendated"></span>
+				</button>
+			</form>
+		</div>
+	</div>
+</wicket:panel>
+</body>
+</html>

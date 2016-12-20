@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns:wicket="http://wicket.apache.org">
+<wicket:head>
+</wicket:head>
+<body>
+	<wicket:panel>
+			<table class="table table-striped">
+				<thead>
+					<tr class="textbook-table-header">
+						<th style="table-layout: fixed; width: 5%">
+							<a href="#" wicket:id="textbook-sort-link">
+								<span wicket:id="textbook-no-label">[Book No]</span>
+							</a>
+						</th>
+						<th style="table-layout: fixed; width: 10%">
+							<span wicket:id="textbook-isbn-label">[Book ISBN]</span>
+						</th>
+						<th style="table-layout: fixed; width: 15%"><span
+							wicket:id="textbook-title-label">[Book Title]</span></th>
+						<th style="table-layout: fixed; width: 35%"><span
+							wicket:id="textbook-author-label">[Book Authors]</span></th>
+						<th style="table-layout: fixed; width: 15%"><span
+							wicket:id="textbook-publisher-label">[Book Publishers]</span></th>
+						<th style="table-layout: fixed; width: 10%"><span
+							wicket:id="textbook-copyright-label">[Book Copyright]</span></th>
+						<th style="table-layout: fixed; width: 5%"><span
+							wicket:id="textbook-price-label">[Book Price]</span></th>
+						<th style="table-layout: fixed; width: 5%"><span
+							wicket:id="textbook-action-label">[Action]</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr wicket:id="table-textbooks">
+						<td style="table-layout: fixed; width: 5%"><span
+							wicket:id="textbook-no-item">[Book No]</span></td>
+						<td style="table-layout: fixed; width: 10%"><span
+							wicket:id="textbook-isbn-item">[Book ISBN]</span></td>
+						<td style="table-layout: fixed; width: 15%"><span
+							wicket:id="textbook-title-item">[Book Title]</span></td>
+						<td style="table-layout: fixed; width: 35%"><span
+							wicket:id="textbook-author-item">[Book Authors]</span></td>
+						<td style="table-layout: fixed; width: 15%"><span
+							wicket:id="textbook-publisher-item">[Book Publisher]</span></td>
+						<td style="table-layout: fixed; width: 10%"><span
+							wicket:id="textbook-copyright-item">[Book Copyright]</span></td>
+						<td style="table-layout: fixed; width: 5%"><span
+							wicket:id="textbook-price-item">[Book Price]</span></td>
+						<td style="table-layout: fixed; width: 5%">
+  							<div wicket:id="textbook-delete-dialog"></div>
+ 							<a class="btn btn-default" wicket:id="textbook-delete-link">
+								<span wicket:id="textbook-delete-label">[Delete]</span>
+							</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+	</wicket:panel>
+</body>
+</html>

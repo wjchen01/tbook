@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns:wicket="http://wicket.apache.org">
+<body>
+<wicket:panel>
+	<div class="panel">
+		<div class="panel-body">
+			<form class="form-horizontal" role="form" wicket:id="textbook-upload-form">
+   				<div class="form-group">
+   					<span>
+						<label wicket:id="textboook-upload-description"></label> <input wicket:id="textbook-upload-input" type="file" />
+					</span>
+   				</div>
+   				<div class="form-group">
+      				<label wicket:id="textbook-download-description"></label>
+      				<a class="btn btn-sm btn-default" wicket:id="textbook-download-template-btn">
+       					<span wicket:id="textbook-download-btn-label"></span>
+       				</a>
+       			</div>
+       			<div class="form-group">
+       				<button class="btn btn-sm btn-default" wicket:id="textbook-upload-btn">
+       					<span wicket:id="textbook-upload-btn-label"></span>
+       				</button>       				
+       				<button class="btn btn-sm btn-default" wicket:id="textbook-cancel-btn">
+       					<span wicket:id="textbook-cancel-btn-label"></span>       				
+       				</button>
+       			</div>
+   			</form>
+			<div>
+        		<span wicket:id="textbook-upload-feedback"></span>
+    		</div>
+    	</div>
+    </div>
+</wicket:panel>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns:wicket="http://wicket.apache.org">
+<body>
+<wicket:extend>
+<!-- 	<div class="container-fluid"> -->
+<!-- 	<div class="row"> -->
+	<div class="col-lg-4" style="padding-left: 0, padding-right: 0">
+		<ul wicket:id="coursebook-sortable" class="sortable">
+			<li wicket:id="coursebook-sortable-items" 
+				class="sortable_item" 
+				title="Click And Drag Textbooks Into The Order That You Want" 
+				style="-moz-user-select: none; position: static; display: list-item;">
+				<div class="panel panel-default">
+					<div wicket:id="coursebook-isbn" class="item">[label]</div>
+					<div wicket:id="coursebook-title" class="item">[label]</div>
+				</div>
+			</li>
+		</ul>
+		<br/>
+		<div wicket:id="feedback" style="width: 60%;"></div>
+		<table>
+			<tr>
+				<td>
+					<a class="btn btn-default" wicket:id="coursebook-sortable-save">Save</a>
+				</td>
+				<td>
+					<a class="btn btn-default" wicket:id="coursebook-sortable-cancel">Cancel</a>
+				</td>
+				<td>
+					<a class="btn btn-default" wicket:id="coursebook-sortable-reset">Reset</a>
+				</td>
+			</tr>
+		</table>
+	</div>
+<!-- 	</div> -->
+<!-- 	</div> -->
+</wicket:extend>
+</body>
+</html>

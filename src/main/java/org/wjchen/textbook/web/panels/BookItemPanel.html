@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns:wicket="http://wicket.apache.org">
+<body>
+	<wicket:panel>
+	
+		<div class="panel">
+			<div class="panel-heading">
+				<h4><span class="panel-title" wicket:id="item-book-title"></span></h4>
+			</div>
+			<div class="panel-body">
+				<table class="table borderless">
+					<tbody>
+						<tr>
+							<td><b><span wicket:id="label-book-isbn"></span></b></td>
+							<td><span wicket:id="item-book-isbn"></span></td>
+						</tr>
+						<tr>
+							<td><b><span wicket:id="label-book-author"></span></b></td>
+							<td><span wicket:id="item-book-author"></span></td>
+						</tr>
+						<tr>
+							<td><b><span wicket:id="label-book-publisher"></span></b></td>
+							<td><span wicket:id="item-book-publisher"></span></td>
+						</tr>
+						<tr>
+							<td><b><span wicket:id="label-book-copyright"></span></b></td>
+							<td><span wicket:id="item-book-copyright"></span></td>
+						</tr>
+						<tr>
+							<td>
+								<a class="btn btn-default" wicket:id="add-as-required-link">
+									<span wicket:id="add-as-required-label"></span>
+								</a>	
+							</td>
+							<td>
+								<a class="btn btn-default" wicket:id="add-as-recommanded-link">
+									<span wicket:id="add-as-recommanded-label"></span>
+								</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+	</wicket:panel>
+</body>
+</html>

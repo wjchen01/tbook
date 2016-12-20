@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns:wicket="http://wicket.apache.org">
+<body>
+	<wicket:panel>
+		<form wicket:id="import-course-select-form">
+        	<span wicket:id="import-course-group">
+            	<table class="table table-striped">
+            		<thead>
+            			<tr class="textbook-table-header">
+            				<td style="table-layout: fixed; width: 30%">
+            					<span wicket:id="import-course-number-label"></span>
+            				</td>
+            				<td style="table-layout: fixed; width: 50%">
+            					<span wicket:id="import-course-number-label"></span>
+            				</td>
+            				<td style="table-layout: fixed; width: 20%">
+            					<span wicket:id="import-course-selectall-label"></span>
+            					<input type="checkbox" wicket:id="import-course-selectall"></input>
+            				</td>
+            			</tr>
+            		</thead>
+            		<tbody>
+            			<tr wicket:id="list-importable-courses">
+            				<td style="table-layout: fixed; width: 30%">
+            					<span wicket:id="import-course-id"></span>
+            				</td>
+           					<td style="table-layout: fixed; width: 50%">
+            					<span wicket:id="import-course-title"></span>
+            				</td>
+            				<td style="table-layout: fixed; width: 20%">
+            					<input type="checkbox" wicket:id="import-course-select"></input>
+            				</td>
+            			</tr>
+            			<tr>
+            				<td colspan="2">
+            					<input class="btn btn-sm btn_default" type="submit" wicket:id="button-import" value="Import" />
+            					<input class="btn btn-sm btn_default" type="submit" wicket:id="button-cancel" value="Cancel" />
+            				</td>
+            			</tr>
+            		</tbody>
+            	</table>
+        	</span>
+     	</form>
+	</wicket:panel>
+</body>
+</html>
